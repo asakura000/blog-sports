@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import AddSports from './AddSports';
 import CustomTabPanel from '../components/CustomTabPanel';
 import a11yProps from '../utils/a11yProps';
+import SportsTable from './SportsTable';
 
 export default function Sports() {
     const [value, setValue] = React.useState(0);
@@ -21,7 +22,7 @@ export default function Sports() {
           <AddSports />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Sports Table
+          <SportsTable />
         </CustomTabPanel>
       </Box>
     );

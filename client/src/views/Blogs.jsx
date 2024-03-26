@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import AddBlog from './AddBlog';
 import CustomTabPanel from '../components/CustomTabPanel';
 import a11yProps from '../utils/a11yProps';
+import BlogsTable from './BlogsTable';
 
 export default function Blogs() {
     const [value, setValue] = React.useState(0);
@@ -20,7 +21,7 @@ export default function Blogs() {
             <AddBlog />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-            Blogs Table
+            <BlogsTable />
         </CustomTabPanel>
     </Box>
 }
