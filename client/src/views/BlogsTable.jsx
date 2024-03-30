@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { getBlogs } from '../api/dummy';
+import { getBlogEntries, getSportsEntries } from '../api/dummy';
 
 export default function BlogsTable() {
 
@@ -15,7 +15,7 @@ export default function BlogsTable() {
     React.useEffect( () => {
         let running = true
         async function fetchBlogs() {
-            const fetchedBlogs = await getBlogs()
+            const fetchedBlogs = await getBlogEntries()
             if (!running) return
             setBlogs(fetchedBlogs)
         }

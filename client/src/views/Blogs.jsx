@@ -18,7 +18,7 @@ export default function Blogs() {
             </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-            <AddBlog />
+            <AddBlog navigate={setValue}/>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
             <BlogsTable />

@@ -19,7 +19,7 @@ export default function Sports() {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <AddSports />
+          <AddSports navigate={setValue}/>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <SportsTable />
