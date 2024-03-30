@@ -53,7 +53,7 @@ function AddBlog({navigate}) {
 
     return (
         <form onSubmit={handleAddBlog}>
-            <TextField type="date" label="Date" value={date} onChange={(event, newValue) => setDate(newValue)}/>
+            <TextField type="date" label="Date" value={date} onChange={(event, newValue) => setDate(event.target.value)}/>
 
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Author</InputLabel>
@@ -62,14 +62,14 @@ function AddBlog({navigate}) {
                     id="demo-simple-select"
                     //value={age}
                     label="Author"
-                    onChange={(event, newValue) => setAuthor(newValue)}
+                    onChange={(event, newValue) => setAuthor(event.target.value)}
                 >
                     {authors.map((author) => <MenuItem value={author}>{author}</MenuItem>)}
                 </Select>
             </FormControl>
-            <TextField label="Title" value={title} onChange={(event, newValue) => setTitle(newValue)} fullWidth/> 
-            <TextField label="Body" value={body} onChange={(event, newValue) => setBody(newValue)} multiline fullWidth/> 
-            <TextField label="Link" value={link} onChange={(event, newValue) => setLink(newValue)} fullWidth/>
+            <TextField label="Title" value={title} onChange={(event, newValue) => setTitle(event.target.value)} fullWidth/> 
+            <TextField label="Body" value={body} onChange={(event, newValue) => setBody(event.target.value)} multiline fullWidth/> 
+            <TextField label="Link" value={link} onChange={(event, newValue) => setLink(event.target.value)} fullWidth/>
             <Button type="submit">Add Blog</Button>
         </form>
     )
